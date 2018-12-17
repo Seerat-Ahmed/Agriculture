@@ -8,6 +8,7 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
+import TextBox from './core/components/TextBox/TextBox';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -20,7 +21,23 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Seerat Ahmed Khan</Text>
+        <TextBox
+          placeholder="Enter Username"
+          icon="user"
+          onChangeText={console.log} />
+        <TextBox
+          placeholder="Enter Email"
+          icon="envelope"
+          type="FontAwesome"
+          onChangeText={console.log} />
+        <TextBox
+          placeholder="Enter Password"
+          icon="lock"
+          onChangeText={console.log} />
+        <TextBox
+          placeholder="Enter Confirm Password"
+          icon="lock"
+          onChangeText={console.log} />
       </View>
     );
   }
