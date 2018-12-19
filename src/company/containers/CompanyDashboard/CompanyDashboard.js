@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Image, TextInputFocusEventData } from 'react-native';
+import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 import { RegisterScreen } from '../../../core/containers';
 /**
  * Company Dashboard
@@ -9,7 +8,6 @@ import { RegisterScreen } from '../../../core/containers';
 class CompanyDashboard extends Component {
 
     static navigationOptions = ({ navigation }) => ({
-        title: 'Company',
         headerStyle: {
             backgroundColor: '#272727',
         },
@@ -36,8 +34,20 @@ class CompanyDashboard extends Component {
                         source={require('../../../assets/images/logo.jpg')} />
                 </View>
                 <View style={styles.row}>
+                    <DashboardItem
+                        text="Add Fertilizers"
+                        image={require('../../../assets/images/fertilizer.png')} />
+                    <DashboardItem
+                        text="Add Machinery"
+                        image={require('../../../assets/images/tractor.png')} />
                 </View>
                 <View style={styles.row}>
+                    <DashboardItem
+                        text="Add Pesticides"
+                        image={require('../../../assets/images/bio.png')} />
+                    <DashboardItem
+                        text="Added Items"
+                        image={require('../../../assets/images/harvest.png')} />
                 </View>
             </View>
         );
@@ -48,7 +58,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#272727',
         color: '#eeeeee',
@@ -56,24 +66,38 @@ const styles = StyleSheet.create({
     },
     row: {
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center',
+        flexDirection: 'row',
+        flex: 1,
+        width: '100%',
     },
     logo: {
         width: 130,
         height: 130,
+    },
+    text: {
+        color: '#fafafa'
+    },
+    icon: {
+        height: 70,
+        width: 70,
+    },
+    item: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
     }
 });
 
-const MyDrawerNavigator = createDrawerNavigator({
-    Home: {
-        screen: RegisterScreen,
-    },
-    Notifications: {
-        screen: CompanyDashboard,
-    },
-}, {header: null});
-// MyDrawerNavigator.navigationOptions({header:null})
-export const MyDrawer = createAppContainer(MyDrawerNavigator);
+const DashboardItem = ({ text, image, onPress }) => (
+    <TouchableOpacity style={styles.item}>
+        <Image
+            style={styles.icon}
+            source={image} />
+        <Text style={styles.text}>{text}</Text>
+    </TouchableOpacity>
+);
 
 export default CompanyDashboard;
