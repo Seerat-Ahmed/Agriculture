@@ -65,15 +65,15 @@ const styles = StyleSheet.create({
     }
 });
 
-const MyDrawerNavigator = createDrawerNavigator({
-    Home: {
-        screen: RegisterScreen,
-    },
-    Notifications: {
-        screen: CompanyDashboard,
-    },
-}, {header: null});
+// const MyDrawerNavigator = createDrawerNavigator({
+//     Home: {
+//         screen: RegisterScreen,
+//     },
+//     Notifications: {
+//         screen: CompanyDashboard,
+//     },
+// }, {header: null});
 // MyDrawerNavigator.navigationOptions({header:null})
-export const MyDrawer = createAppContainer(MyDrawerNavigator);
+// export const MyDrawer = createAppContainer(MyDrawerNavigator);
 
 export default CompanyDashboard;
