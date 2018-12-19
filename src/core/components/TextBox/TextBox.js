@@ -4,7 +4,6 @@ import { FormInput } from 'react-native-elements';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-
 /**
  * 
  * Custom Textbox
@@ -12,7 +11,6 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 class TextBox extends Component {
     render() {
         const {
-            label,
             placeholder,
             onChangeText = () => { },
             value,
@@ -28,19 +26,22 @@ class TextBox extends Component {
                             (type === 'FontAwesome') ?
                                 <FontAwesome
                                     name={icon}
+                                    color="#fafafa"
                                     type="FontAwesome"
                                     size={20} />
                                 :
                                 <EntypoIcon
                                     name={icon}
+                                    color="#fafafa"
                                     type="Entypo"
                                     size={20} />
                         }
                     </View>
                     <View style={styles.inputWrapper}>
-                        {/* <FormLabel>{label}</FormLabel> */}
                         <FormInput
+                            style={styles.text}
                             placeholder={placeholder}
+                            placeholderTextColor="#fafafa"
                             onChangeText={onChangeText} />
                     </View>
                 </View>
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '95%',
-        borderBottomColor: '#333',
+        borderBottomColor: '#fafafa',
         borderBottomWidth: 1
     },
     iconWrapper: {
@@ -68,6 +69,9 @@ const styles = StyleSheet.create({
     inputWrapper: {
         width: '90%',
     },
+    text: {
+        color: '#fafafa'
+    }
 });
 
 export default TextBox;
