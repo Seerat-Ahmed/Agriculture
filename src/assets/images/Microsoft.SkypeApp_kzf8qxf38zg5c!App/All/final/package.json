@@ -1,0 +1,25 @@
+{
+  "name": "farmerAPI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "aashir",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "cloudinary": "^1.11.0",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.12",
+    "morgan": "^1.9.0",
+    "multer": "^1.4.1",
+    "nodemon": "^1.18.3",
+    "request": "^2.81.0",
+    "socket.io": "^2.1.1",
+    "validator": "^10.8.0"
+  }
+}
