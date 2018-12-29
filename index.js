@@ -7,4 +7,4 @@ import { RegisterScreen } from './src/core/containers';
 import { PaymentAndTerms, Conversation } from './src/company/containers';
 import ChatList from './src/core/containers/ChatList/ChatList';
 
-AppRegistry.registerComponent(appName, () => Conversation);
+AppRegistry.registerComponent(appName, () => AppNavigator);

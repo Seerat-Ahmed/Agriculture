@@ -5,7 +5,7 @@ import AddMachinery from './AddMachinery/AddMachinery';
 import AddedItem from './AddedItem/AddedItem';
 import PaymentAndTerms from './PaymentAndTerms/PaymentAndTerms';
 import ItemDetail from './ItemDetail/ItemDetail';
-import ChatList from './ChatList/ChatList';
+// import ChatList from './ChatList/ChatList';
 import Conversation from './Conversation/Conversation';
 
 export {
@@ -14,7 +14,7 @@ export {
     AddPesticides,
     AddMachinery,
     AddedItem,
-    ChatList,
+    // ChatList,
     PaymentAndTerms,
     ItemDetail,
     Conversation
