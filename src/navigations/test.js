@@ -1,6 +1,6 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import App from '../App';
 import { MyDrawer } from '../company/navigation/drawer';
+import { AddFertilizer, AddPesticides, AddMachinery, AddedItem, ItemDetail, Conversation } from '../company/containers';
 
 
 const navigation = {
@@ -15,6 +15,24 @@ const navigation = {
 const AppNavigator = createStackNavigator({
     Home: {
         screen: MyDrawer
+    },
+    AddFertilizer: {
+        screen: AddFertilizer
+    },
+    AddPesticides: {
+        screen: AddPesticides
+    },
+    AddMachinery: {
+        screen: AddMachinery
+    },
+    AddedItem: {
+        screen: AddedItem
+    },
+    ItemDetail: {
+        screen: ItemDetail
+    },
+    Conversation: {
+        screen: Conversation
     }
 }, navigation);
 

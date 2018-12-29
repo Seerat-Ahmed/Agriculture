@@ -36,17 +36,21 @@ class CompanyDashboard extends Component {
                 <View style={styles.row}>
                     <DashboardItem
                         text="Add Fertilizers"
+                        onPress={() => this.props.navigation.navigate('AddFertilizer')}
                         image={require('../../../assets/images/fertilizer.png')} />
                     <DashboardItem
                         text="Add Machinery"
+                        onPress={() => this.props.navigation.navigate('AddMachinery')}
                         image={require('../../../assets/images/tractor.png')} />
                 </View>
                 <View style={styles.row}>
                     <DashboardItem
                         text="Add Pesticides"
+                        onPress={() => this.props.navigation.navigate('AddPesticides')}
                         image={require('../../../assets/images/bio.png')} />
                     <DashboardItem
                         text="Added Items"
+                        onPress={() => this.props.navigation.navigate('AddedItem')}
                         image={require('../../../assets/images/harvest.png')} />
                 </View>
             </View>
@@ -92,7 +96,7 @@ const styles = StyleSheet.create({
 });
 
 const DashboardItem = ({ text, image, onPress }) => (
-    <TouchableOpacity style={styles.item}>
+    <TouchableOpacity onPress={onPress} style={styles.item}>
         <Image
             style={styles.icon}
             source={image} />
